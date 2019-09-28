@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Control_Unit">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode1:inst3|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_lbf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode2:inst123|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_0af.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_add_sub1:inst22|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_c2i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_counter0:SequenceCounter|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_bri.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode2:inst126|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_0af.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode3:inst93|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_0af.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode4:inst65|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_0af.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_counter1:S|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_2cj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Control_Unit|lpm_decode0:inst2|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_5af.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
