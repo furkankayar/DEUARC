@@ -1,0 +1,360 @@
+Simulator report for ALU
+Tue Apr 23 14:17:39 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 160 nodes    ;
+; Simulation Coverage         ;      61.25 % ;
+; Total Number of Transitions ; 615          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                        ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                      ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                   ; Timing        ;
+; Start time                                                                                 ; 0 ns                                         ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                          ;               ;
+; Vector input source                                                                        ; /home/furkan/altera/13.0sp1/ALU/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                           ; On            ;
+; Check outputs                                                                              ; Off                                          ; Off           ;
+; Report simulation coverage                                                                 ; On                                           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                           ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                           ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                           ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                          ; Off           ;
+; Detect glitches                                                                            ; Off                                          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                          ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                         ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                    ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                    ; Transport     ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      61.25 % ;
+; Total nodes checked                                 ; 160          ;
+; Total output ports checked                          ; 160          ;
+; Total output ports with complete 1/0-value coverage ; 98           ;
+; Total output ports with no 1/0-value coverage       ; 36           ;
+; Total output ports with no 1-value coverage         ; 62           ;
+; Total output ports with no 0-value coverage         ; 36           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                    ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                             ; Output Port Type ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |ALU|V                                                                                       ; |ALU|V                                                                                       ; pin_out          ;
+; |ALU|inst4                                                                                   ; |ALU|inst4                                                                                   ; out0             ;
+; |ALU|sel[2]                                                                                  ; |ALU|sel[2]                                                                                  ; out              ;
+; |ALU|sel[1]                                                                                  ; |ALU|sel[1]                                                                                  ; out              ;
+; |ALU|sel[0]                                                                                  ; |ALU|sel[0]                                                                                  ; out              ;
+; |ALU|inst7                                                                                   ; |ALU|inst7                                                                                   ; out0             ;
+; |ALU|q[3]                                                                                    ; |ALU|q[3]                                                                                    ; pin_out          ;
+; |ALU|q[2]                                                                                    ; |ALU|q[2]                                                                                    ; pin_out          ;
+; |ALU|q[1]                                                                                    ; |ALU|q[1]                                                                                    ; pin_out          ;
+; |ALU|q[0]                                                                                    ; |ALU|q[0]                                                                                    ; pin_out          ;
+; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; out0             ;
+; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]          ; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]          ; out0             ;
+; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; out0             ;
+; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; out0             ;
+; |ALU|lpm_mux2:inst|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1         ; |ALU|lpm_mux2:inst|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1         ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~0                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~0                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~2                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~2                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~4                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~4                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~5                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~5                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~6                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~6                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~7                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~7                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~9                 ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~9                 ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~11                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~11                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~13                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~13                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~14                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~14                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~15                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~15                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~16                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~16                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~19                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~19                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~20                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~20                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]~0    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]~0    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~27                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~27                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~28                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~28                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~36                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~36                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~37                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~37                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~41                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~41                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~42                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~42                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]~1    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]~1    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]      ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[3]      ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~43                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~43                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~45                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~45                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~47                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~47                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~48                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~48                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~49                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~49                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~50                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~50                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~54                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~54                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~56                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~56                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~57                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~57                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~58                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~58                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~59                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~59                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~62                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~62                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~63                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~63                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]~2    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]~2    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~70                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~70                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~71                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~71                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~79                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~79                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~80                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~80                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~84                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~84                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~85                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~85                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]~3    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]~3    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]      ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[2]      ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~86                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~86                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~88                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~88                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~90                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~90                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~92                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~92                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~93                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~93                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~95                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~95                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~97                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~97                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~99                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~99                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~101               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~101               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~102               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~102               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~105               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~105               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~106               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~106               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]~4    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]~4    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~113               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~113               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~114               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~114               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~122               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~122               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~123               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~123               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~127               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~127               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~128               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~128               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]~5    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]~5    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]      ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[1]      ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~134               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~134               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~135               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~135               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~136               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~136               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~143               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~143               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~144               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~144               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~145               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~145               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~148               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~148               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~149               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~149               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]~6    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]~6    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~157               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~157               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~166               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~166               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~170               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~170               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~171               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~171               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]~7    ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]~7    ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]      ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|result_node[0]      ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~7  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~7  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~12 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~12 ; out0             ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                             ; Output Port Type ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |ALU|inst8                                                                                   ; |ALU|inst8                                                                                   ; out0             ;
+; |ALU|A[3]                                                                                    ; |ALU|A[3]                                                                                    ; out              ;
+; |ALU|A[2]                                                                                    ; |ALU|A[2]                                                                                    ; out              ;
+; |ALU|A[1]                                                                                    ; |ALU|A[1]                                                                                    ; out              ;
+; |ALU|A[0]                                                                                    ; |ALU|A[0]                                                                                    ; out              ;
+; |ALU|B[3]                                                                                    ; |ALU|B[3]                                                                                    ; out              ;
+; |ALU|B[2]                                                                                    ; |ALU|B[2]                                                                                    ; out              ;
+; |ALU|B[1]                                                                                    ; |ALU|B[1]                                                                                    ; out              ;
+; |ALU|B[0]                                                                                    ; |ALU|B[0]                                                                                    ; out              ;
+; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; out0             ;
+; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]          ; |ALU|lpm_mux2:inst2|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]          ; out0             ;
+; |ALU|lpm_mux2:inst3|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; |ALU|lpm_mux2:inst3|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; out0             ;
+; |ALU|lpm_xor:xor|xor_cascade[3][1]                                                           ; |ALU|lpm_xor:xor|xor_cascade[3][1]                                                           ; out0             ;
+; |ALU|lpm_xor:xor|xor_cascade[2][1]                                                           ; |ALU|lpm_xor:xor|xor_cascade[2][1]                                                           ; out0             ;
+; |ALU|lpm_xor:xor|xor_cascade[1][1]                                                           ; |ALU|lpm_xor:xor|xor_cascade[1][1]                                                           ; out0             ;
+; |ALU|lpm_xor:xor|xor_cascade[0][1]                                                           ; |ALU|lpm_xor:xor|xor_cascade[0][1]                                                           ; out0             ;
+; |ALU|lpm_or:or|or_node[3][1]                                                                 ; |ALU|lpm_or:or|or_node[3][1]                                                                 ; out0             ;
+; |ALU|lpm_or:or|or_node[2][1]                                                                 ; |ALU|lpm_or:or|or_node[2][1]                                                                 ; out0             ;
+; |ALU|lpm_or:or|or_node[1][1]                                                                 ; |ALU|lpm_or:or|or_node[1][1]                                                                 ; out0             ;
+; |ALU|lpm_or:or|or_node[0][1]                                                                 ; |ALU|lpm_or:or|or_node[0][1]                                                                 ; out0             ;
+; |ALU|lpm_and:and|and_node[3][1]                                                              ; |ALU|lpm_and:and|and_node[3][1]                                                              ; out0             ;
+; |ALU|lpm_and:and|and_node[2][1]                                                              ; |ALU|lpm_and:and|and_node[2][1]                                                              ; out0             ;
+; |ALU|lpm_and:and|and_node[1][1]                                                              ; |ALU|lpm_and:and|and_node[1][1]                                                              ; out0             ;
+; |ALU|lpm_and:and|and_node[0][1]                                                              ; |ALU|lpm_and:and|and_node[0][1]                                                              ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~22                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~22                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~31                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~31                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~40                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~40                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~52                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~52                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~65                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~65                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~74                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~74                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~83                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~83                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~91                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~91                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~100               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~100               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~108               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~108               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~117               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~117               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~126               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~126               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~129               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~129               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~131               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~131               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~133               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~133               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~138               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~138               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~140               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~140               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~142               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~142               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~151               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~151               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~156               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~156               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~160               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~160               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~165               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~165               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~169               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~169               ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~0  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~0  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~1  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~1  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~2  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~2  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~3  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~3  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~4  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~4  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~5  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~5  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~6  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~6  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~8  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~8  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~9  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~9  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~10 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~10 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~11 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~11 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~13 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~13 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~14 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~14 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~15 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~15 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~16 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~16 ; out0             ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                             ; Output Port Type ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |ALU|A[1]                                                                                    ; |ALU|A[1]                                                                                    ; out              ;
+; |ALU|B[3]                                                                                    ; |ALU|B[3]                                                                                    ; out              ;
+; |ALU|B[2]                                                                                    ; |ALU|B[2]                                                                                    ; out              ;
+; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; |ALU|lpm_mux2:inst1|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~1        ; out0             ;
+; |ALU|lpm_mux2:inst3|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; |ALU|lpm_mux2:inst3|lpm_mux:LPM_MUX_component|mux_96e:auto_generated|result_node[0]~0        ; out0             ;
+; |ALU|lpm_xor:xor|xor_cascade[0][1]                                                           ; |ALU|lpm_xor:xor|xor_cascade[0][1]                                                           ; out0             ;
+; |ALU|lpm_and:and|and_node[3][1]                                                              ; |ALU|lpm_and:and|and_node[3][1]                                                              ; out0             ;
+; |ALU|lpm_and:and|and_node[2][1]                                                              ; |ALU|lpm_and:and|and_node[2][1]                                                              ; out0             ;
+; |ALU|lpm_and:and|and_node[1][1]                                                              ; |ALU|lpm_and:and|and_node[1][1]                                                              ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~22                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~22                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~31                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~31                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~40                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~40                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~52                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~52                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~65                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~65                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~74                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~74                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~83                ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~83                ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~108               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~108               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~117               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~117               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~126               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~126               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~129               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~129               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~131               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~131               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~133               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~133               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~138               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~138               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~140               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~140               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~142               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~142               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~151               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~151               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~160               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~160               ; out0             ;
+; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~169               ; |ALU|lpm_mux0:muxresult|lpm_mux:LPM_MUX_component|mux_j6e:auto_generated|_~169               ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~0  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~0  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~2  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~2  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~4  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~4  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~5  ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~5  ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~10 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~10 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~11 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~11 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~15 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~15 ; out0             ;
+; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~16 ; |ALU|lpm_add_sub0:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_5ki:auto_generated|op_1~16 ; out0             ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 23 14:17:39 2019
+Info: Command: quartus_sim --simulation_results_format=VWF ALU -c ALU
+Info (324025): Using vector source file "/home/furkan/altera/13.0sp1/ALU/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      61.25 %
+Info (328052): Number of transitions in simulation is 615
+Info (324045): Vector file ALU.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 657 megabytes
+    Info: Processing ended: Tue Apr 23 14:17:39 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
