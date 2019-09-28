@@ -1,0 +1,795 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/01/2019 20:26:58"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Common_Bus_System
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Common_Bus_System_vlg_sample_tst(
+	alu_sel,
+	ALUTESTSEL,
+	Clock,
+	decode_bus_load_control,
+	decode_reg_clr_control,
+	decode_reg_inc_control,
+	decode_reg_load_control,
+	INPR,
+	mux_bus_general_reg_select,
+	mux_bus_out_control,
+	TEST1INPUT,
+	TEST2INPUT,
+	TESTLOAD1,
+	TESTLOAD2,
+	TESTMUXSEL,
+	sampler_tx
+);
+input [2:0] alu_sel;
+input [2:0] ALUTESTSEL;
+input  Clock;
+input [2:0] decode_bus_load_control;
+input [2:0] decode_reg_clr_control;
+input [3:0] decode_reg_inc_control;
+input [1:0] decode_reg_load_control;
+input [3:0] INPR;
+input [1:0] mux_bus_general_reg_select;
+input [2:0] mux_bus_out_control;
+input [3:0] TEST1INPUT;
+input [3:0] TEST2INPUT;
+input  TESTLOAD1;
+input  TESTLOAD2;
+input  TESTMUXSEL;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(alu_sel or ALUTESTSEL or Clock or decode_bus_load_control or decode_reg_clr_control or decode_reg_inc_control or decode_reg_load_control or INPR or mux_bus_general_reg_select or mux_bus_out_control or TEST1INPUT or TEST2INPUT or TESTLOAD1 or TESTLOAD2 or TESTMUXSEL)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Common_Bus_System_vlg_check_tst (
+	ALU_OUT_TEST,
+	ALUTESTOUTPUT,
+	OUTR,
+	TEST1OUTPUT,
+	sampler_rx
+);
+input [3:0] ALU_OUT_TEST;
+input [3:0] ALUTESTOUTPUT;
+input [3:0] OUTR;
+input [3:0] TEST1OUTPUT;
+input sampler_rx;
+
+reg [3:0] ALU_OUT_TEST_expected;
+reg [3:0] ALUTESTOUTPUT_expected;
+reg [3:0] OUTR_expected;
+reg [3:0] TEST1OUTPUT_expected;
+
+reg [3:0] ALU_OUT_TEST_prev;
+reg [3:0] ALUTESTOUTPUT_prev;
+reg [3:0] OUTR_prev;
+reg [3:0] TEST1OUTPUT_prev;
+
+reg [3:0] ALU_OUT_TEST_expected_prev;
+reg [3:0] ALUTESTOUTPUT_expected_prev;
+reg [3:0] OUTR_expected_prev;
+reg [3:0] TEST1OUTPUT_expected_prev;
+
+reg [3:0] last_ALU_OUT_TEST_exp;
+reg [3:0] last_ALUTESTOUTPUT_exp;
+reg [3:0] last_OUTR_exp;
+reg [3:0] last_TEST1OUTPUT_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	ALU_OUT_TEST_prev = ALU_OUT_TEST;
+	ALUTESTOUTPUT_prev = ALUTESTOUTPUT;
+	OUTR_prev = OUTR;
+	TEST1OUTPUT_prev = TEST1OUTPUT;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	ALU_OUT_TEST_expected_prev = ALU_OUT_TEST_expected;
+	ALUTESTOUTPUT_expected_prev = ALUTESTOUTPUT_expected;
+	OUTR_expected_prev = OUTR_expected;
+	TEST1OUTPUT_expected_prev = TEST1OUTPUT_expected;
+end
+
+
+// expected OUTR[ 3 ]
+initial
+begin
+	OUTR_expected[3] = 1'bX;
+end 
+// expected OUTR[ 2 ]
+initial
+begin
+	OUTR_expected[2] = 1'bX;
+end 
+// expected OUTR[ 1 ]
+initial
+begin
+	OUTR_expected[1] = 1'bX;
+end 
+// expected OUTR[ 0 ]
+initial
+begin
+	OUTR_expected[0] = 1'bX;
+end 
+// expected ALU_OUT_TEST[ 3 ]
+initial
+begin
+	ALU_OUT_TEST_expected[3] = 1'bX;
+end 
+// expected ALU_OUT_TEST[ 2 ]
+initial
+begin
+	ALU_OUT_TEST_expected[2] = 1'bX;
+end 
+// expected ALU_OUT_TEST[ 1 ]
+initial
+begin
+	ALU_OUT_TEST_expected[1] = 1'bX;
+end 
+// expected ALU_OUT_TEST[ 0 ]
+initial
+begin
+	ALU_OUT_TEST_expected[0] = 1'bX;
+end 
+// expected ALUTESTOUTPUT[ 3 ]
+initial
+begin
+	ALUTESTOUTPUT_expected[3] = 1'bX;
+end 
+// expected ALUTESTOUTPUT[ 2 ]
+initial
+begin
+	ALUTESTOUTPUT_expected[2] = 1'bX;
+end 
+// expected ALUTESTOUTPUT[ 1 ]
+initial
+begin
+	ALUTESTOUTPUT_expected[1] = 1'bX;
+end 
+// expected ALUTESTOUTPUT[ 0 ]
+initial
+begin
+	ALUTESTOUTPUT_expected[0] = 1'bX;
+end 
+// expected TEST1OUTPUT[ 3 ]
+initial
+begin
+	TEST1OUTPUT_expected[3] = 1'bX;
+end 
+// expected TEST1OUTPUT[ 2 ]
+initial
+begin
+	TEST1OUTPUT_expected[2] = 1'bX;
+end 
+// expected TEST1OUTPUT[ 1 ]
+initial
+begin
+	TEST1OUTPUT_expected[1] = 1'bX;
+end 
+// expected TEST1OUTPUT[ 0 ]
+initial
+begin
+	TEST1OUTPUT_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(ALU_OUT_TEST_expected or ALU_OUT_TEST or ALUTESTOUTPUT_expected or ALUTESTOUTPUT or OUTR_expected or OUTR or TEST1OUTPUT_expected or TEST1OUTPUT)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected ALU_OUT_TEST = %b | expected ALUTESTOUTPUT = %b | expected OUTR = %b | expected TEST1OUTPUT = %b | ",ALU_OUT_TEST_expected_prev,ALUTESTOUTPUT_expected_prev,OUTR_expected_prev,TEST1OUTPUT_expected_prev);
+	$display("| real ALU_OUT_TEST = %b | real ALUTESTOUTPUT = %b | real OUTR = %b | real TEST1OUTPUT = %b | ",ALU_OUT_TEST_prev,ALUTESTOUTPUT_prev,OUTR_prev,TEST1OUTPUT_prev);
+`endif
+	if (
+		( ALU_OUT_TEST_expected_prev[0] !== 1'bx ) && ( ALU_OUT_TEST_prev[0] !== ALU_OUT_TEST_expected_prev[0] )
+		&& ((ALU_OUT_TEST_expected_prev[0] !== last_ALU_OUT_TEST_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALU_OUT_TEST[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALU_OUT_TEST_expected_prev);
+		$display ("     Real value = %b", ALU_OUT_TEST_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALU_OUT_TEST_exp[0] = ALU_OUT_TEST_expected_prev[0];
+	end
+	if (
+		( ALU_OUT_TEST_expected_prev[1] !== 1'bx ) && ( ALU_OUT_TEST_prev[1] !== ALU_OUT_TEST_expected_prev[1] )
+		&& ((ALU_OUT_TEST_expected_prev[1] !== last_ALU_OUT_TEST_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALU_OUT_TEST[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALU_OUT_TEST_expected_prev);
+		$display ("     Real value = %b", ALU_OUT_TEST_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALU_OUT_TEST_exp[1] = ALU_OUT_TEST_expected_prev[1];
+	end
+	if (
+		( ALU_OUT_TEST_expected_prev[2] !== 1'bx ) && ( ALU_OUT_TEST_prev[2] !== ALU_OUT_TEST_expected_prev[2] )
+		&& ((ALU_OUT_TEST_expected_prev[2] !== last_ALU_OUT_TEST_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALU_OUT_TEST[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALU_OUT_TEST_expected_prev);
+		$display ("     Real value = %b", ALU_OUT_TEST_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALU_OUT_TEST_exp[2] = ALU_OUT_TEST_expected_prev[2];
+	end
+	if (
+		( ALU_OUT_TEST_expected_prev[3] !== 1'bx ) && ( ALU_OUT_TEST_prev[3] !== ALU_OUT_TEST_expected_prev[3] )
+		&& ((ALU_OUT_TEST_expected_prev[3] !== last_ALU_OUT_TEST_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALU_OUT_TEST[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALU_OUT_TEST_expected_prev);
+		$display ("     Real value = %b", ALU_OUT_TEST_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALU_OUT_TEST_exp[3] = ALU_OUT_TEST_expected_prev[3];
+	end
+	if (
+		( ALUTESTOUTPUT_expected_prev[0] !== 1'bx ) && ( ALUTESTOUTPUT_prev[0] !== ALUTESTOUTPUT_expected_prev[0] )
+		&& ((ALUTESTOUTPUT_expected_prev[0] !== last_ALUTESTOUTPUT_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUTESTOUTPUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUTESTOUTPUT_expected_prev);
+		$display ("     Real value = %b", ALUTESTOUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ALUTESTOUTPUT_exp[0] = ALUTESTOUTPUT_expected_prev[0];
+	end
+	if (
+		( ALUTESTOUTPUT_expected_prev[1] !== 1'bx ) && ( ALUTESTOUTPUT_prev[1] !== ALUTESTOUTPUT_expected_prev[1] )
+		&& ((ALUTESTOUTPUT_expected_prev[1] !== last_ALUTESTOUTPUT_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUTESTOUTPUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUTESTOUTPUT_expected_prev);
+		$display ("     Real value = %b", ALUTESTOUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ALUTESTOUTPUT_exp[1] = ALUTESTOUTPUT_expected_prev[1];
+	end
+	if (
+		( ALUTESTOUTPUT_expected_prev[2] !== 1'bx ) && ( ALUTESTOUTPUT_prev[2] !== ALUTESTOUTPUT_expected_prev[2] )
+		&& ((ALUTESTOUTPUT_expected_prev[2] !== last_ALUTESTOUTPUT_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUTESTOUTPUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUTESTOUTPUT_expected_prev);
+		$display ("     Real value = %b", ALUTESTOUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ALUTESTOUTPUT_exp[2] = ALUTESTOUTPUT_expected_prev[2];
+	end
+	if (
+		( ALUTESTOUTPUT_expected_prev[3] !== 1'bx ) && ( ALUTESTOUTPUT_prev[3] !== ALUTESTOUTPUT_expected_prev[3] )
+		&& ((ALUTESTOUTPUT_expected_prev[3] !== last_ALUTESTOUTPUT_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUTESTOUTPUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUTESTOUTPUT_expected_prev);
+		$display ("     Real value = %b", ALUTESTOUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ALUTESTOUTPUT_exp[3] = ALUTESTOUTPUT_expected_prev[3];
+	end
+	if (
+		( OUTR_expected_prev[0] !== 1'bx ) && ( OUTR_prev[0] !== OUTR_expected_prev[0] )
+		&& ((OUTR_expected_prev[0] !== last_OUTR_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR_expected_prev);
+		$display ("     Real value = %b", OUTR_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR_exp[0] = OUTR_expected_prev[0];
+	end
+	if (
+		( OUTR_expected_prev[1] !== 1'bx ) && ( OUTR_prev[1] !== OUTR_expected_prev[1] )
+		&& ((OUTR_expected_prev[1] !== last_OUTR_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR_expected_prev);
+		$display ("     Real value = %b", OUTR_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR_exp[1] = OUTR_expected_prev[1];
+	end
+	if (
+		( OUTR_expected_prev[2] !== 1'bx ) && ( OUTR_prev[2] !== OUTR_expected_prev[2] )
+		&& ((OUTR_expected_prev[2] !== last_OUTR_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR_expected_prev);
+		$display ("     Real value = %b", OUTR_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR_exp[2] = OUTR_expected_prev[2];
+	end
+	if (
+		( OUTR_expected_prev[3] !== 1'bx ) && ( OUTR_prev[3] !== OUTR_expected_prev[3] )
+		&& ((OUTR_expected_prev[3] !== last_OUTR_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR_expected_prev);
+		$display ("     Real value = %b", OUTR_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR_exp[3] = OUTR_expected_prev[3];
+	end
+	if (
+		( TEST1OUTPUT_expected_prev[0] !== 1'bx ) && ( TEST1OUTPUT_prev[0] !== TEST1OUTPUT_expected_prev[0] )
+		&& ((TEST1OUTPUT_expected_prev[0] !== last_TEST1OUTPUT_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port TEST1OUTPUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TEST1OUTPUT_expected_prev);
+		$display ("     Real value = %b", TEST1OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_TEST1OUTPUT_exp[0] = TEST1OUTPUT_expected_prev[0];
+	end
+	if (
+		( TEST1OUTPUT_expected_prev[1] !== 1'bx ) && ( TEST1OUTPUT_prev[1] !== TEST1OUTPUT_expected_prev[1] )
+		&& ((TEST1OUTPUT_expected_prev[1] !== last_TEST1OUTPUT_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port TEST1OUTPUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TEST1OUTPUT_expected_prev);
+		$display ("     Real value = %b", TEST1OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_TEST1OUTPUT_exp[1] = TEST1OUTPUT_expected_prev[1];
+	end
+	if (
+		( TEST1OUTPUT_expected_prev[2] !== 1'bx ) && ( TEST1OUTPUT_prev[2] !== TEST1OUTPUT_expected_prev[2] )
+		&& ((TEST1OUTPUT_expected_prev[2] !== last_TEST1OUTPUT_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port TEST1OUTPUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TEST1OUTPUT_expected_prev);
+		$display ("     Real value = %b", TEST1OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_TEST1OUTPUT_exp[2] = TEST1OUTPUT_expected_prev[2];
+	end
+	if (
+		( TEST1OUTPUT_expected_prev[3] !== 1'bx ) && ( TEST1OUTPUT_prev[3] !== TEST1OUTPUT_expected_prev[3] )
+		&& ((TEST1OUTPUT_expected_prev[3] !== last_TEST1OUTPUT_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port TEST1OUTPUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TEST1OUTPUT_expected_prev);
+		$display ("     Real value = %b", TEST1OUTPUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_TEST1OUTPUT_exp[3] = TEST1OUTPUT_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Common_Bus_System_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [2:0] alu_sel;
+reg [2:0] ALUTESTSEL;
+reg Clock;
+reg [2:0] decode_bus_load_control;
+reg [2:0] decode_reg_clr_control;
+reg [3:0] decode_reg_inc_control;
+reg [1:0] decode_reg_load_control;
+reg [3:0] INPR;
+reg [1:0] mux_bus_general_reg_select;
+reg [2:0] mux_bus_out_control;
+reg [3:0] TEST1INPUT;
+reg [3:0] TEST2INPUT;
+reg TESTLOAD1;
+reg TESTLOAD2;
+reg TESTMUXSEL;
+// wires                                               
+wire [3:0] ALU_OUT_TEST;
+wire [3:0] ALUTESTOUTPUT;
+wire [3:0] OUTR;
+wire [3:0] TEST1OUTPUT;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Common_Bus_System i1 (
+// port map - connection between master ports and signals/registers   
+	.ALU_OUT_TEST(ALU_OUT_TEST),
+	.alu_sel(alu_sel),
+	.ALUTESTOUTPUT(ALUTESTOUTPUT),
+	.ALUTESTSEL(ALUTESTSEL),
+	.Clock(Clock),
+	.decode_bus_load_control(decode_bus_load_control),
+	.decode_reg_clr_control(decode_reg_clr_control),
+	.decode_reg_inc_control(decode_reg_inc_control),
+	.decode_reg_load_control(decode_reg_load_control),
+	.INPR(INPR),
+	.mux_bus_general_reg_select(mux_bus_general_reg_select),
+	.mux_bus_out_control(mux_bus_out_control),
+	.OUTR(OUTR),
+	.TEST1INPUT(TEST1INPUT),
+	.TEST1OUTPUT(TEST1OUTPUT),
+	.TEST2INPUT(TEST2INPUT),
+	.TESTLOAD1(TESTLOAD1),
+	.TESTLOAD2(TESTLOAD2),
+	.TESTMUXSEL(TESTMUXSEL)
+);
+
+// Clock
+always
+begin
+	Clock = 1'b0;
+	Clock = #20000 1'b1;
+	#20000;
+end 
+// decode_reg_load_control[ 1 ]
+initial
+begin
+	decode_reg_load_control[1] = 1'b0;
+	decode_reg_load_control[1] = #140000 1'b1;
+	decode_reg_load_control[1] = #200000 1'b0;
+	decode_reg_load_control[1] = #40000 1'b1;
+end 
+// decode_reg_load_control[ 0 ]
+initial
+begin
+	decode_reg_load_control[0] = 1'b0;
+	decode_reg_load_control[0] = #100000 1'b1;
+	decode_reg_load_control[0] = #40000 1'b0;
+	decode_reg_load_control[0] = #200000 1'b1;
+	decode_reg_load_control[0] = #40000 1'b0;
+end 
+// decode_reg_clr_control[ 2 ]
+initial
+begin
+	decode_reg_clr_control[2] = 1'b0;
+end 
+// decode_reg_clr_control[ 1 ]
+initial
+begin
+	decode_reg_clr_control[1] = 1'b1;
+end 
+// decode_reg_clr_control[ 0 ]
+initial
+begin
+	decode_reg_clr_control[0] = 1'b1;
+end 
+// mux_bus_out_control[ 2 ]
+initial
+begin
+	mux_bus_out_control[2] = 1'b0;
+	mux_bus_out_control[2] = #180000 1'b1;
+	mux_bus_out_control[2] = #40000 1'b0;
+	mux_bus_out_control[2] = #320000 1'b1;
+	mux_bus_out_control[2] = #40000 1'b0;
+	mux_bus_out_control[2] = #40000 1'b1;
+end 
+// mux_bus_out_control[ 1 ]
+initial
+begin
+	mux_bus_out_control[1] = 1'b0;
+	mux_bus_out_control[1] = #580000 1'b1;
+	mux_bus_out_control[1] = #40000 1'b0;
+end 
+// mux_bus_out_control[ 0 ]
+initial
+begin
+	mux_bus_out_control[0] = 1'b0;
+	mux_bus_out_control[0] = #180000 1'b1;
+	mux_bus_out_control[0] = #40000 1'b0;
+end 
+// mux_bus_general_reg_select[ 1 ]
+initial
+begin
+	mux_bus_general_reg_select[1] = 1'b0;
+	mux_bus_general_reg_select[1] = #580000 1'b1;
+end 
+// mux_bus_general_reg_select[ 0 ]
+initial
+begin
+	mux_bus_general_reg_select[0] = 1'b0;
+end 
+// decode_reg_inc_control[ 3 ]
+initial
+begin
+	decode_reg_inc_control[3] = 1'b1;
+	decode_reg_inc_control[3] = #220000 1'b0;
+	decode_reg_inc_control[3] = #40000 1'b1;
+end 
+// decode_reg_inc_control[ 2 ]
+initial
+begin
+	decode_reg_inc_control[2] = 1'b1;
+	decode_reg_inc_control[2] = #220000 1'b0;
+	decode_reg_inc_control[2] = #40000 1'b1;
+end 
+// decode_reg_inc_control[ 1 ]
+initial
+begin
+	decode_reg_inc_control[1] = 1'b1;
+	decode_reg_inc_control[1] = #220000 1'b0;
+	decode_reg_inc_control[1] = #40000 1'b1;
+end 
+// decode_reg_inc_control[ 0 ]
+initial
+begin
+	decode_reg_inc_control[0] = 1'b1;
+	decode_reg_inc_control[0] = #220000 1'b0;
+	decode_reg_inc_control[0] = #40000 1'b1;
+end 
+// decode_bus_load_control[ 2 ]
+initial
+begin
+	decode_bus_load_control[2] = 1'b0;
+	decode_bus_load_control[2] = #220000 1'b1;
+	decode_bus_load_control[2] = #280000 1'b0;
+	decode_bus_load_control[2] = #80000 1'b1;
+end 
+// decode_bus_load_control[ 1 ]
+initial
+begin
+	decode_bus_load_control[1] = 1'b0;
+	decode_bus_load_control[1] = #500000 1'b1;
+	decode_bus_load_control[1] = #80000 1'b0;
+end 
+// decode_bus_load_control[ 0 ]
+initial
+begin
+	decode_bus_load_control[0] = 1'b0;
+	decode_bus_load_control[0] = #500000 1'b1;
+	decode_bus_load_control[0] = #40000 1'b0;
+	decode_bus_load_control[0] = #40000 1'b1;
+end 
+// INPR[ 3 ]
+initial
+begin
+	INPR[3] = 1'b1;
+end 
+// INPR[ 2 ]
+initial
+begin
+	INPR[2] = 1'b1;
+end 
+// INPR[ 1 ]
+initial
+begin
+	INPR[1] = 1'b0;
+end 
+// INPR[ 0 ]
+initial
+begin
+	INPR[0] = 1'b1;
+end 
+// alu_sel[ 2 ]
+initial
+begin
+	alu_sel[2] = 1'b0;
+end 
+// alu_sel[ 1 ]
+initial
+begin
+	alu_sel[1] = 1'b0;
+end 
+// alu_sel[ 0 ]
+initial
+begin
+	alu_sel[0] = 1'b1;
+end 
+// TEST1INPUT[ 3 ]
+initial
+begin
+	TEST1INPUT[3] = 1'b0;
+end 
+// TEST1INPUT[ 2 ]
+initial
+begin
+	TEST1INPUT[2] = 1'b0;
+end 
+// TEST1INPUT[ 1 ]
+initial
+begin
+	TEST1INPUT[1] = 1'b0;
+	TEST1INPUT[1] = #20000 1'b1;
+end 
+// TEST1INPUT[ 0 ]
+initial
+begin
+	TEST1INPUT[0] = 1'b0;
+end 
+// TEST2INPUT[ 3 ]
+initial
+begin
+	TEST2INPUT[3] = 1'b0;
+	TEST2INPUT[3] = #20000 1'b1;
+end 
+// TEST2INPUT[ 2 ]
+initial
+begin
+	TEST2INPUT[2] = 1'b0;
+	TEST2INPUT[2] = #20000 1'b1;
+end 
+// TEST2INPUT[ 1 ]
+initial
+begin
+	TEST2INPUT[1] = 1'b0;
+end 
+// TEST2INPUT[ 0 ]
+initial
+begin
+	TEST2INPUT[0] = 1'b0;
+	TEST2INPUT[0] = #20000 1'b1;
+end 
+// ALUTESTSEL[ 2 ]
+initial
+begin
+	ALUTESTSEL[2] = 1'b0;
+end 
+// ALUTESTSEL[ 1 ]
+initial
+begin
+	ALUTESTSEL[1] = 1'b0;
+end 
+// ALUTESTSEL[ 0 ]
+initial
+begin
+	ALUTESTSEL[0] = 1'b0;
+	ALUTESTSEL[0] = #20000 1'b1;
+end 
+
+// TESTMUXSEL
+initial
+begin
+	TESTMUXSEL = 1'b0;
+end 
+
+// TESTLOAD1
+initial
+begin
+	TESTLOAD1 = 1'b0;
+	TESTLOAD1 = #20000 1'b1;
+	TESTLOAD1 = #20000 1'b0;
+	TESTLOAD1 = #20000 1'b1;
+	TESTLOAD1 = #20000 1'b0;
+end 
+
+// TESTLOAD2
+initial
+begin
+	TESTLOAD2 = 1'b0;
+	TESTLOAD2 = #20000 1'b1;
+	TESTLOAD2 = #20000 1'b0;
+end 
+
+Common_Bus_System_vlg_sample_tst tb_sample (
+	.alu_sel(alu_sel),
+	.ALUTESTSEL(ALUTESTSEL),
+	.Clock(Clock),
+	.decode_bus_load_control(decode_bus_load_control),
+	.decode_reg_clr_control(decode_reg_clr_control),
+	.decode_reg_inc_control(decode_reg_inc_control),
+	.decode_reg_load_control(decode_reg_load_control),
+	.INPR(INPR),
+	.mux_bus_general_reg_select(mux_bus_general_reg_select),
+	.mux_bus_out_control(mux_bus_out_control),
+	.TEST1INPUT(TEST1INPUT),
+	.TEST2INPUT(TEST2INPUT),
+	.TESTLOAD1(TESTLOAD1),
+	.TESTLOAD2(TESTLOAD2),
+	.TESTMUXSEL(TESTMUXSEL),
+	.sampler_tx(sampler)
+);
+
+Common_Bus_System_vlg_check_tst tb_out(
+	.ALU_OUT_TEST(ALU_OUT_TEST),
+	.ALUTESTOUTPUT(ALUTESTOUTPUT),
+	.OUTR(OUTR),
+	.TEST1OUTPUT(TEST1OUTPUT),
+	.sampler_rx(sampler)
+);
+endmodule
+
